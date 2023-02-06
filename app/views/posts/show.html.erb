@@ -1,0 +1,13 @@
+<p><%=link_to "新規投稿へ", new_home_path %></p>
+
+<div id="post">
+  <h1> コーヒーロースター一覧</h1>
+  <div id='map'></div>
+  <div data-position='@all_post_position' id='marker-data'></div>
+  
+  <script>
+  <%= javascript_pack_tag 'home/index' %>
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_MAP_API']%>&callback"></script>
+
+</div>
